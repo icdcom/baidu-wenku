@@ -14,8 +14,8 @@
   
       }
     
-      WenKuUtil.enterPrintView = function(rmCtrl  ){
-          rmCtrl = (rmCtrl || true  );
+      WenKuUtil.enterPrintView = function(rmCtrl){
+          rmCtrl = (rmCtrl == undefined ? true : rmCtrl);
           $(".aside").remove  ();
           $("#doc #hd").remove  ();
           $(".crubms-wrap").remove  ();
