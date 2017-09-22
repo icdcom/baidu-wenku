@@ -43,7 +43,7 @@
     $(".doc-main").css("width", "100%");
     $(".inner").css("width", "100%");
     $("#reader-container-1").css("width", "100%");
-
+    $(".reader-page").css("margin", 0);
   }
 
 )(true);
