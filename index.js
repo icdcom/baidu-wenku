@@ -9,9 +9,31 @@
 // ==/UserScript==
 
 (
+   var pageCnt = ".reader-page";
    function(){
       function WenKuUtil(){
-  
+         this.pageNum = $(pageCnt).length;
+         for(var i=0; i < this.pageNum; i++;){
+            this.pageTxt['reader-page-'+(i+1)] = null;  
+         }
+      }
+      
+      WenKuUtil.prototype = {
+         pageNum : 0,
+         pageTxt : {}
+      };
+      
+      WenKuUtil.prototype.constructor = WenKuUtil;
+      
+      function IsDocPageOutofView(){
+         var top = $(window).scrollTop(), 
+		   divBottom = $(sel).offset().top + $(sel).outerHeight();
+		   if (divBottom > top) {
+            return false;
+         } else { 
+            console.log("out of view");
+            return true;
+         }
       }
     
       WenKuUtil.enterPrintView = function(rmCtrl){
