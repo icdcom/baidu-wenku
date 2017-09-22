@@ -39,7 +39,9 @@
           if(rmCtrl ){
             $(".reader-fullScreen").remove  ();
             $(".pageList-btn").remove ();
-            }
+            $("#next_doc_box").remove();
+            $("#html-reader-go-more").remove();
+          }
         
           $("*").css("border", 0  );
           $(".bd-wrap").css("width", "100 %");
